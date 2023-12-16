@@ -9,6 +9,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class', // Enable dark mode
   theme: {
     extend: {
       colors: {
@@ -25,7 +26,7 @@ module.exports = {
         tertiary: '#000000',
       },
       fontFamily: {
-        sans: ['Poppins', 'sans'],
+        sans: ['Poppins', 'sans-serif'],
         serif: ['Roboto Slab', 'serif'],
       },
     },
