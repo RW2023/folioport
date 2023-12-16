@@ -13,23 +13,13 @@ const Footer = () => {
         <div className="grid grid-flow-col gap-4 text-3xl">
           {/* GitHub */}
           <a
-            href="https://github.com/RW2023/rw-images"
-            target="_blank"
+            href="https://github.com/RW2023/"
+            target="https://github.com/RW2023"
             rel="noopener noreferrer"
             aria-label="GitHub"
           >
             <i className="fab fa-github"></i>
             <span className="sr-only">GitHub</span>
-          </a>
-          {/* Instagram */}
-          <a
-            href="https://www.instagram.com/ryanwilsonimages/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-            <i className="fab fa-instagram"></i>
-            <span className="sr-only">Instagram</span>
           </a>
         </div>
       </nav>
