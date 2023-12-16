@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import SubHeading from './SubHeading';
-import DarkModeToggle from '../DarkModeToggle';
+import DarkModeToggle from './DarkModeToggle';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -107,14 +107,6 @@ const Navbar = () => {
               <i className="fas fa-images mr-2"></i>About Me
             </span>
           </Link>
-          {/* <Link href="/ai">
-            <span
-              onClick={closeNavbar}
-              className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl  hover:underline mr-4 cursor-pointer"
-            >
-              <i className="fas fa-robot mr-2"></i>AI
-            </span>
-          </Link> */}
           <Link href="/feedback">
             <span
               onClick={closeNavbar}
