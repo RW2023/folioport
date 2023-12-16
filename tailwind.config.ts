@@ -9,7 +9,6 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: 'class', // Enable dark mode
   theme: {
     extend: {
       colors: {
@@ -24,6 +23,12 @@ module.exports = {
         highlight: '#f8f32b',
         secondary: '#8d99ae',
         tertiary: '#000000',
+        // Dark mode specific colors
+        dark: {
+          headline: '#ffffff', // White for headlines
+          paragraph: '#c0c7d0', // Lighter grey for paragraphs
+          // Add other dark mode colors as needed
+        },
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
