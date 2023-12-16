@@ -91,30 +91,30 @@ const Navbar = () => {
         } w-full lg:flex lg:items-center lg:w-auto lg:justify-end`}
       >
         <div className="text-sm lg:flex-grow">
+          <Link href="/projects">
+            <span
+              onClick={closeNavbar}
+              className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl  hover:underline mr-4 cursor-pointer"
+            >
+              <i className="fas fa-info-circle mr-2"></i>Projects
+            </span>
+          </Link>
           <Link href="/about">
             <span
               onClick={closeNavbar}
               className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl  hover:underline mr-4 cursor-pointer"
             >
-              <i className="fas fa-info-circle mr-2"></i>About
+              <i className="fas fa-images mr-2"></i>About Me
             </span>
           </Link>
-          <Link href="/gallery">
-            <span
-              onClick={closeNavbar}
-              className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl  hover:underline mr-4 cursor-pointer"
-            >
-              <i className="fas fa-images mr-2"></i>Photography
-            </span>
-          </Link>
-          <Link href="/ai">
+          {/* <Link href="/ai">
             <span
               onClick={closeNavbar}
               className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl  hover:underline mr-4 cursor-pointer"
             >
               <i className="fas fa-robot mr-2"></i>AI
             </span>
-          </Link>
+          </Link> */}
           <Link href="/feedback">
             <span
               onClick={closeNavbar}
