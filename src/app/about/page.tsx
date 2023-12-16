@@ -12,7 +12,7 @@ export default function About() {
           iconClass="fas fa-code"
         />
 
-        <div className="grid grid-col-1 gap-6 md:col-1 lg:grid-cols-2 lg-w-3/4">
+        <div className="grid grid-col-1 gap-3 md:col-1 lg:grid-cols-2 lg-w-3/4">
           <div className="card bg-base-300 shadow-xl mb-6 glass  mx-auto text-lg lg:w-3/4 ">
             <div className="card-body">
               <SubHeading title="My Story" iconClass="fas fa-book" />
