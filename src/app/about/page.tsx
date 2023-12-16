@@ -8,52 +8,80 @@ export default function About() {
       <div className="container mx-auto p-6">
         <Heading title="About" iconClass="fas fa-info" />
 
-        <div className="card shadow-xl mb-4 glass bg-black">
-          <div className="glass card-body text-headline">
-            <SubHeading
-              title="The Journey of Capturing Moments"
-              iconClass="fas fa-camera"
-            />
-            <p>
-              This site is my digital canvas - a central spot on the internet
-              for showcasing my photography. It&apos;s born from a passion for
-              capturing the fleeting moments and the beauty of the world through
-              the lens.
-            </p>
-          </div>
-        </div>
-
-        <div className="card  shadow-xl mb-4 glass bg-black">
-          <div className="card-body text-headline">
-            <SubHeading
-              title="A Blend of Art and Technology"
-              iconClass="fas fa-paint-brush"
-            />
-            <p>
-              Beyond just photographs, this site represents a journey in digital
-              artistry, combining creative expression with technological
-              innovation. Each image tells a story, capturing emotions and
-              landscapes in unique compositions.
-            </p>
-          </div>
-        </div>
-
-        <div className="card shadow-xl mb-4 glass bg-black text-headline">
+        <div className="card bg-base-300 shadow-xl mb-6 glass">
           <div className="card-body">
             <SubHeading
-              title="Coding Meets Creativity"
+              title="Ryan Wilson Full Stack Developer"
               iconClass="fas fa-code"
             />
-            <p>
-              Building this site has been a personal exploration in web
-              development and design, intertwining my coding practice with my
-              passion for photography, demonstrating how technology can enhance
-              artistic expression.
+            <p className="text-left">
+              I have always had a passion for technology and computers. From a
+              young age, I was fascinated with machines and how they worked. I
+              was in the 9th grade when my father got a computer. I was amazed
+              at how it worked and how it could do so many things. I was
+              especially fascinated by the internet. I imagined a time when all
+              machines would talk to one another and share information. I was
+              hooked. I knew I wanted to be a part of this new world.
             </p>
           </div>
         </div>
 
-        <div className="card bg-black shadow-xl mb-6 glass text-headline">
+        <div className="card bg-base-300 shadow-xl mb-6 glass">
+          <div className="card-body">
+            <SubHeading
+              title="in the beginning..."
+              iconClass="fas fa-terminal"
+            />
+            <p className="text-l">
+              My first brush with programming was in the 10th grade. I took a
+              computer programming class. I landed probably the worst intro to
+              programming teacher you could imagine. We were learning COBOL, no
+              real explanation of why that language and how it fits into the
+              overall picture of programming. I was so bored I dropped the
+              class. I didn&apos;t think I would ever be a programmer. I was
+              increasingly intrigued by machines but i was starting feel like
+              coding was just not for me.
+            </p>
+          </div>
+        </div>
+
+        <div className="card bg-base-300 shadow-xl mb-6 glass ">
+          <div className="card-body">
+            <SubHeading
+              title="tech wont leave me alone"
+              iconClass="fas fa-laptop-code"
+            />
+            <p>
+              My next brush with programming was just out of high school. I was
+              working my first tech support job supporting HP PC Hardware at the
+              time. A friend gifted me a book. It was a book on programming in
+              C++. I struggled through the first few chapters. It was then I was
+              sure programming was not for me. I wanted it to get better. It just
+              got worse. it seemed like every single concept was over my head. I
+              was so discouraged I gave up. It did nothing, however, to shake my fascination
+              with computers and technology in general. coding just continued to naw at me.
+            </p>
+          </div>
+        </div>
+
+        <div className="card bg-base-300 shadow-xl mb-6 glass">
+          <div className="card-body">
+            <SubHeading title="Passion" iconClass="fas fa-heart" />
+            <p>
+              Creating this portfolio has been a journey learning. This site is
+              not just a showcase of my technical abilities, but also a
+              testament to my dedication and passion for crafting efficient,
+              dynamic, and user-friendly web applications. Every project and
+              code snippet here is a reflection of my commitment to leveraging
+              technology for practical, real-world solutions. This portfolio
+              stands as a living proof of my journey in web development,
+              illustrating how each line of code is a step towards mastering
+              this ever-evolving field
+            </p>
+          </div>
+        </div>
+
+        <div className="card bg-base-300 shadow-xl mb-6 glass">
           <div className="card-body">
             <SubHeading
               title="A Continuous Evolution"
