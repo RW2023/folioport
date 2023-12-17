@@ -3,13 +3,13 @@ import React from 'react';
 
 const DarkModeToggle = () => {
   const toggleDarkMode = () => {
-    document.body.classList.toggle('dark');
+    document.body.classList.toggle('light');
   };
 
   return (
     <label className="swap swap-rotate">
       {/* this hidden checkbox controls the state */}
-      <input type="checkbox" className="theme-controller" value="business" />
+      <input type="checkbox" className="theme-controller" value="corporate" />
 
       {/* sun icon */}
       <svg
