@@ -1,14 +1,9 @@
-import type { Metadata } from 'next'
+//src/app/layout.tsx
 import './globals.css'
 import Navbar from '@/components/ui/Navbar'
 import Footer from '@/components/ui/Footer'
 
 
-
-export const metadata: Metadata = {
-  title: 'Ryan Wilson Developer',
-  description: 'Ryan Wilson portfolio',
-}
 
 export default function RootLayout({
   children,
