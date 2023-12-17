@@ -1,3 +1,4 @@
+//src/app/page.tsx
 import Heading from "@/components/ui/Heading";
 import SubHeading from "@/components/ui/SubHeading";
 
