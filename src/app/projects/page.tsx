@@ -12,7 +12,7 @@ const page: FC<Props> = (props): JSX.Element => {
         title="This is a subheading on the projects Page"
         iconClass="fas fa-project-diagram"
       />
-      <p className="text-xl">This is paragraph font on the Home Page</p>
+      <p className="text-xl">This is paragraph font on the Projects Page</p>
     </div>
   );
 };
