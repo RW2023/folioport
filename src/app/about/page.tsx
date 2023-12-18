@@ -65,13 +65,9 @@ export default function About() {
 
        
             <Heading title="About me" iconClass="fas fa-info" />
-          </motion.div>
+        
 
-          <motion.div
-            initial="hidden"
-            animate={controls}
-            variants={slideInVariants}
-          >
+     
             <SubHeading title="Full Stack Developer" iconClass="fas fa-code" />
           </motion.div>
 
