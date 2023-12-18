@@ -12,9 +12,9 @@ export default function About() {
           title="Ryan Wilson Full Stack Developer"
           iconClass="fas fa-code"
         />
-        <div className='flex flex-col justify-center items-center m-1 mb-5'>
-            <SubHeading title="GitHub Stats" iconClass="fab fa-github" />
-            <GitHubStreak />
+        <div className="flex flex-col justify-center items-center m-1 mb-5">
+          <SubHeading title="GitHub Stats" iconClass="fab fa-github" />
+          <GitHubStreak />
         </div>
 
         <div className="grid grid-col-1 gap-3 md:col-1 lg:grid-cols-2 lg-w-3/4">
@@ -25,10 +25,10 @@ export default function About() {
                 I have always had a passion for technology and computers. From a
                 young age, I was fascinated with machines and how they worked. I
                 was in the 9th grade when my father got a computer. I was amazed
-                at how it worked and how it could do so many things. I was
-                especially fascinated by the internet. I imagined a time when
-                all machines would talk to one another and share information. I
-                was hooked. I knew I wanted to be a part of this new world.
+                at how it worked and how it could do so many things. </p><br />
+                <p>
+                After highschool i attended The University of Western Ontario where i
+                earned a degree in Sociology. I continued to work with technology in my personal projects and as a technical support specialist for a few large companies such as Verizon and HP.
               </p>
             </div>
           </div>
