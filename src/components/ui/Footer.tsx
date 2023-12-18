@@ -26,13 +26,7 @@ const Footer = () => {
       <aside>
         <p>
           Copyright © 2023 - All rights reserved by
-          <a
-            href="https://nextport-alpha.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span> Ryan Wilson</span>
-          </a>
+          <span> Ryan Wilson</span>
         </p>
       </aside>
     </footer>
