@@ -41,7 +41,7 @@ const Navbar = () => {
                 className="rounded-full"
               />
               {/* SubHeading */}
-              <SubHeading title="Ryan Wilson" />
+              <SubHeading title="Ryan Wilson" iconClass='fas fa-person' />
             </div>
           </span>
         </Link>
