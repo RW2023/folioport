@@ -41,7 +41,7 @@ export default function About() {
             <GitHubStreak />
           </div>
 
-          <div className="grid grid-col-1 gap-3 md:col-1 lg:grid-cols-2 lg-w-3/4">
+          <div className="grid grid-col-1 gap-3 md:col-1 lg:grid-cols-2 lg-w-4/5">
             <div className="card bg-base-300 shadow-xl mb-6 glass  mx-auto text-lg lg:w-3/4 ">
               <div className="card-body">
                 <SubHeading title="My Story" iconClass="fas fa-book" />
@@ -61,7 +61,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="card bg-base-300 shadow-xl mb-6 glass w-auto mx-auto text-lg lg:w-3/4 ">
+            <div className="card bg-base-300 shadow-xl mb-6 glass w-auto mx-auto text-lg lg:w-4/5 ">
               <div className="card-body">
                 <SubHeading
                   title="in the beginning..."
@@ -96,7 +96,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="card bg-base-300 shadow-xl mb-6 glass  mx-auto text-lg  lg:w-3/4">
+            <div className="card bg-base-300 shadow-xl mb-6 glass  mx-auto text-lg  lg:w-4/5">
               <div className="card-body">
                 <SubHeading
                   title="A Continuous Evolution"
@@ -122,7 +122,7 @@ export default function About() {
           </div>
           <SubHeading title="My Skills" iconClass="fas fa-code" />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <div className="card bg-base-300 shadow-xl mb-6 glass mx-auto text-lg lg:w-3/4">
+            <div className="card bg-base-300 shadow-xl mb-6 glass mx-auto text-lg lg:w-4/5">
               <div className="card-body">
                 <SubHeading
                   title="Front-End Skills"
@@ -148,7 +148,7 @@ export default function About() {
                 </ul>
               </div>
             </div>
-            <div className="card bg-base-300 shadow-xl mb-6 glass mx-auto text-lg lg:w-3/4">
+            <div className="card bg-base-300 shadow-xl mb-6 glass mx-auto text-lg lg:w-4/5">
               <div className="card-body">
                 <SubHeading title="Back-End Skills" iconClass="fas fa-server" />
                 <ul className="list-disc pl-5">
