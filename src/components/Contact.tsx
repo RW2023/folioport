@@ -53,7 +53,7 @@ const Contact: FC<Props> = (props): JSX.Element => {
         <textarea
           id="message"
           placeholder="Your message"
-          className="textarea textarea-bordered h-24"
+          className="textarea textarea-bordered h-18"
         ></textarea>
 
         <button type="submit" className="btn btn-primary mt-4 mb-2">
