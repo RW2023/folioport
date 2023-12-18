@@ -38,10 +38,10 @@ const Navbar = () => {
                 alt="Ryan Wilson"
                 width="40"
                 height="40"
-                style={{ borderRadius: '50%', marginRight: '10px' }} // Add CSS for round image and margin
+                className="rounded-full"
               />
               {/* SubHeading */}
-              <SubHeading title="Ryan Wilson" iconClass="fa fas-person" />
+              <SubHeading title="Ryan Wilson" />
             </div>
           </span>
         </Link>
