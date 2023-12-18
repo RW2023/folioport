@@ -1,13 +1,41 @@
+//src/app/about/page.tsx
+'use client';
 import GitHubStreak from '@/components/GithubStreak';
 import Heading from '@/components/ui/Heading';
 import SubHeading from '@/components/ui/SubHeading';
-import React from 'react';
+import React, { useEffect } from 'react'; // Add the missing import statement for useEffect
 import Image from 'next/image';
+import { motion, useAnimation } from 'framer-motion';
 
 
 export default function About() {
+ const controls = useAnimation();
+
+ useEffect(() => {
+   const updateAnimation = () => {
+     // Example condition: start animation when a certain scroll position is reached
+     if (window.scrollY > 0) {
+       controls.start('show');
+     } else {
+       controls.start('hidden');
+     }
+   };
+
+   window.addEventListener('scroll', updateAnimation);
+   return () => window.removeEventListener('scroll', updateAnimation);
+ }, [controls]);
+
+ const slideInVariants = {
+   hidden: { opacity: 0, x: -50 },
+   show: {
+     opacity: 1,
+     x: 0,
+     transition: { type: 'spring', stiffness: 100 },
+   },
+ };
+
   // Construct Cloudinary URL for your image with transformations
-  const imageUrl = `https://res.cloudinary.com/wildev/image/upload/w_100,h_100,c_fill,g_face,r_max/sites/RW%20Images/me_yzjh2n.jpg`;
+   const imageUrl = `https://res.cloudinary.com/wildev/image/upload/w_120,h_120,c_fill,g_face,r_max/sites/RW%20Images/me_yzjh2n.jpg`;
 
   return (
     <>
@@ -17,25 +45,36 @@ export default function About() {
       </head>
       <div className="bg-base-200 min-h-screen">
         <div className="container mx-auto p-6">
-          <div className="flex items-center justify-center">
-            {' '}
-            {/* Flexbox container */}
-            {/* Image */}
-            <Image
-              src={imageUrl}
-              alt="Ryan Wilson Profile Picture"
-              width="100"
-              height="100"
-              className="rounded-full"
-              role="img"
-              aria-label="Profile picture of Ryan Wilson"
-            />
-            {/* SubHeading */}
-            {/* <SubHeading title="Ryan Wilson"  /> */}
-          </div>
+          <motion.div
+            initial="hidden"
+            animate="show"
+            variants={slideInVariants}
+          >
+            <div className="flex items-center justify-center">
+              <Image
+                src={imageUrl}
+                alt="Ryan Wilson Profile Picture"
+                width="120"
+                height="120"
+                className="rounded-full"
+                role="img"
+                aria-label="Profile picture of Ryan Wilson"
+              />
+            </div>
+          
 
-          <Heading title="About me" iconClass="fas fa-info" />
-          <SubHeading title="Full Stack Developer" iconClass="fas fa-code" />
+       
+            <Heading title="About me" iconClass="fas fa-info" />
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            animate={controls}
+            variants={slideInVariants}
+          >
+            <SubHeading title="Full Stack Developer" iconClass="fas fa-code" />
+          </motion.div>
+
           <div className="flex flex-col justify-center items-center m-1 mb-5">
             <SubHeading title="GitHub Stats" iconClass="fab fa-github" />
             <GitHubStreak />
