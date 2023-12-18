@@ -2,14 +2,33 @@ import GitHubStreak from '@/components/GithubStreak';
 import Heading from '@/components/ui/Heading';
 import SubHeading from '@/components/ui/SubHeading';
 import React from 'react';
+import Image from 'next/image';
 
 export default function About() {
+  // Construct Cloudinary URL for your image with transformations
+  const imageUrl = `https://res.cloudinary.com/wildev/image/upload/w_100,h_100,c_fill,g_face,r_max/sites/RW%20Images/me_yzjh2n.jpg`;
+
   return (
     <div className="bg-base-200 min-h-screen">
       <div className="container mx-auto p-6">
+        <div className="flex items-center justify-center">
+          {' '}
+          {/* Flexbox container */}
+          {/* Image */}
+          <Image
+            src={imageUrl}
+            alt="Ryan Wilson"
+            width="100"
+            height="100"
+            className="rounded-full"
+          />
+          {/* SubHeading */}
+          {/* <SubHeading title="Ryan Wilson"  /> */}
+        </div>
+
         <Heading title="About me" iconClass="fas fa-info" />
         <SubHeading
-          title="Ryan Wilson Full Stack Developer"
+          title="Full Stack Developer"
           iconClass="fas fa-code"
         />
         <div className="flex flex-col justify-center items-center m-1 mb-5">
@@ -25,10 +44,14 @@ export default function About() {
                 I have always had a passion for technology and computers. From a
                 young age, I was fascinated with machines and how they worked. I
                 was in the 9th grade when my father got a computer. I was amazed
-                at how it worked and how it could do so many things. </p><br />
-                <p>
-                After highschool i attended The University of Western Ontario where i
-                earned a degree in Sociology. I continued to work with technology in my personal projects and as a technical support specialist for a few large companies such as Verizon and HP.
+                at how it worked and how it could do so many things.{' '}
+              </p>
+              <br />
+              <p>
+                After highschool i attended The University of Western Ontario
+                where i earned a degree in Sociology. I continued to work with
+                technology in my personal projects and as a technical support
+                specialist for a few large companies such as Verizon and HP.
               </p>
             </div>
           </div>
