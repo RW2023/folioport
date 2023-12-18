@@ -82,6 +82,52 @@ export default function About() {
                 as a web developer.
               </p>
             </div>
+            <div></div>
+          </div>
+        </div>
+        <SubHeading title="My Skills" iconClass="fas fa-code" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div className="card bg-base-300 shadow-xl mb-6 glass mx-auto text-lg lg:w-3/4">
+            <div className="card-body">
+              <SubHeading title="Front-End Skills" iconClass="fas fa-desktop" />
+              <ul className="list-disc pl-5">
+                <li>
+                  <i className="fab fa-react"></i> React
+                </li>
+                <li>
+                  <i className="fas fa-code"></i> TypeScript
+                </li>
+                <li>
+                  <i className="fas fa-paint-brush"></i> Tailwind CSS & DaisyUI
+                </li>
+                <li>
+                  <i className="fas fa-magic"></i> Framer Motion
+                </li>
+                <li>
+                  <i className="fab fa-js-square"></i> JavaScript
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="card bg-base-300 shadow-xl mb-6 glass mx-auto text-lg lg:w-3/4">
+            <div className="card-body">
+              <SubHeading title="Back-End Skills" iconClass="fas fa-server" />
+              <ul className="list-disc pl-5">
+                <li>
+                  <i className="fas fa-laptop-code"></i> Full Stack Web
+                  Development
+                </li>
+                <li>
+                  <i className="fas fa-server"></i> Next.js
+                </li>
+                <li>
+                  <i className="fas fa-database"></i> MongoDB
+                </li>
+                <li>
+                  <i className="fab fa-git-alt"></i> Git & GitHub
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
