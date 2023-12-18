@@ -42,7 +42,7 @@ export default function About() {
           </div>
 
           <div className="grid grid-col-1 gap-3 md:col-1 lg:grid-cols-2 lg-w-3/4">
-            <div className="card bg-base-300 shadow-xl mb-6 glass  mx-auto text-2xl lg:w-3/4 ">
+            <div className="card bg-base-300 shadow-xl mb-6 glass  mx-auto text-lg lg:w-3/4 ">
               <div className="card-body">
                 <SubHeading title="My Story" iconClass="fas fa-book" />
                 <p>
@@ -61,7 +61,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="card bg-base-300 shadow-xl mb-6 glass w-auto mx-auto text-2xl lg:w-3/4 ">
+            <div className="card bg-base-300 shadow-xl mb-6 glass w-auto mx-auto text-lg lg:w-3/4 ">
               <div className="card-body">
                 <SubHeading
                   title="in the beginning..."
@@ -79,7 +79,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="card bg-base-300 shadow-xl mb-6 glass mx-auto text-2xl  w-auto lg:w-3/4">
+            <div className="card bg-base-300 shadow-xl mb-6 glass mx-auto text-lg  w-auto lg:w-3/4">
               <div className="card-body">
                 <SubHeading title="over the years" iconClass="fas fa-history" />
                 <p>
@@ -96,7 +96,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="card bg-base-300 shadow-xl mb-6 glass  mx-auto text-2xl  lg:w-3/4">
+            <div className="card bg-base-300 shadow-xl mb-6 glass  mx-auto text-lg  lg:w-3/4">
               <div className="card-body">
                 <SubHeading
                   title="A Continuous Evolution"
