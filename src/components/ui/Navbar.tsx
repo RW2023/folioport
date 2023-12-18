@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   // Construct Cloudinary URL for your image with transformations
-  const imageUrl = `https://res.cloudinary.com/wildev/image/upload/w_40,h_40,c_fill,g_face,r_max/sites/RW%20Images/me_yzjh2n.jpg`;
+  const imageUrl = `https://res.cloudinary.com/wildev/image/upload/w_60,h_60,c_fill,g_face,r_max/sites/RW%20Images/me_yzjh2n.jpg`;
 
   return (
     <nav
@@ -36,8 +36,8 @@ const Navbar = () => {
               <img
                 src={imageUrl}
                 alt="Ryan Wilson"
-                width="40"
-                height="40"
+                width="60"
+                height="60"
                 className="rounded-full"
               />
               {/* SubHeading */}
