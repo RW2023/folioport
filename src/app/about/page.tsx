@@ -1,3 +1,4 @@
+import GitHubStreak from '@/components/GithubStreak';
 import Heading from '@/components/ui/Heading';
 import SubHeading from '@/components/ui/SubHeading';
 import React from 'react';
@@ -11,6 +12,9 @@ export default function About() {
           title="Ryan Wilson Full Stack Developer"
           iconClass="fas fa-code"
         />
+        <div className='flex flex-col justify-center items-center m-1 mb-5'>
+          <GitHubStreak />
+        </div>
 
         <div className="grid grid-col-1 gap-3 md:col-1 lg:grid-cols-2 lg-w-3/4">
           <div className="card bg-base-300 shadow-xl mb-6 glass  mx-auto text-lg lg:w-3/4 ">
