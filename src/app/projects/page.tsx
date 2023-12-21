@@ -20,7 +20,7 @@ const page: FC<Props> = (): JSX.Element => {
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mb-5">
         <motion.div
-          className="card mx-auto items-center border rounded bg-base-300 m-4"
+          className="card  items-center border rounded-md bg-base-300 mx-5 flex flex-col"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -31,7 +31,7 @@ const page: FC<Props> = (): JSX.Element => {
               iconClass="fas fa-images"
             />
           </div>
-          <div className="card-body">
+          <div className="card-body mx-auto border-y glass">
             <div className="card-image className='rounded border-1 border-gray-500 drop-shadow-md'">
               <Image
                 src="/projects/Ryan-Wilson-Images.png"
@@ -40,7 +40,17 @@ const page: FC<Props> = (): JSX.Element => {
                 height={300}
               />
             </div>
-            <div className="card-text"></div>
+            <div className="card-text">
+              <p>
+                This is a photography portfolio website that I built using
+                NextJS, TailwindCSS, and Framer Motion. I used the NextJS Image
+                component to optimize the images for the web. I also used the
+                Framer Motion library to animate.
+              </p>
+              <a href='https://rw-images.vercel.app/' target='_blank' rel='noopener noreferrer'>
+                <button type='button' aria-label='live version' className="btn btn-primary">Live Version</button>
+              </a>
+            </div>
           </div>
         </motion.div>
         <motion.div
