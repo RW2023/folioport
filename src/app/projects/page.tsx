@@ -1,4 +1,6 @@
+'use client';
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 import Heading from '@/components/ui/Heading';
 import SubHeading from '@/components/ui/SubHeading';
 
@@ -16,7 +18,12 @@ const page: FC<Props> = (): JSX.Element => {
         <p className="text-xl">This is paragraph font on the Projects Page</p>
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mb-5">
-        <div className="card mx-auto items-center border rounded bg-base-300">
+        <motion.div
+          className="card mx-auto items-center border rounded bg-base-300"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="card-title">
             <SubHeading
               title={`Card Title 1`}
@@ -26,8 +33,13 @@ const page: FC<Props> = (): JSX.Element => {
           <div className="card-body">
             <p>This is the body for Card 1</p>
           </div>
-        </div>
-        <div className="card mx-auto items-center border rounded bg-base-300">
+        </motion.div>
+        <motion.div
+          className="card mx-auto items-center border rounded bg-base-300"
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="card-title">
             <SubHeading
               title={`Card Title 2`}
@@ -37,8 +49,13 @@ const page: FC<Props> = (): JSX.Element => {
           <div className="card-body">
             <p>This is the body for Card 2</p>
           </div>
-        </div>
-        <div className="card mx-auto items-center border rounded bg-base-300">
+        </motion.div>
+        <motion.div
+          className="card mx-auto items-center border rounded bg-base-300"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="card-title">
             <SubHeading
               title={`Card Title 3`}
@@ -48,8 +65,13 @@ const page: FC<Props> = (): JSX.Element => {
           <div className="card-body">
             <p>This is the body for Card 3</p>
           </div>
-        </div>
-        <div className="card mx-auto items-center border rounded bg-base-300">
+        </motion.div>
+        <motion.div
+          className="card mx-auto items-center border rounded bg-base-300"
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="card-title">
             <SubHeading
               title={`Card Title 4`}
@@ -59,8 +81,13 @@ const page: FC<Props> = (): JSX.Element => {
           <div className="card-body">
             <p>This is the body for Card 4</p>
           </div>
-        </div>
-        <div className="card mx-auto items-center border rounded bg-base-300">
+        </motion.div>
+        <motion.div
+          className="card mx-auto items-center border rounded bg-base-300"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="card-title">
             <SubHeading
               title={`Card Title 5`}
@@ -70,8 +97,13 @@ const page: FC<Props> = (): JSX.Element => {
           <div className="card-body">
             <p>This is the body for Card 5</p>
           </div>
-        </div>
-        <div className="card mx-auto items-center border rounded bg-base-300">
+        </motion.div>
+        <motion.div
+          className="card mx-auto items-center border rounded bg-base-300"
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="card-title">
             <SubHeading
               title={`Card Title 6`}
@@ -81,7 +113,7 @@ const page: FC<Props> = (): JSX.Element => {
           <div className="card-body">
             <p>This is the body for Card 6</p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
