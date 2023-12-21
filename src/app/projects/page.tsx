@@ -48,7 +48,10 @@ const page: FC<Props> = (): JSX.Element => {
                 Framer Motion library to animate.
               </p>
               <a href='https://rw-images.vercel.app/' target='_blank' rel='noopener noreferrer'>
-                <button type='button' aria-label='live version' className="btn btn-primary">Live Version</button>
+                <button type='button' aria-label='live version' className="btn btn-primary m-1">Live Version</button>
+              </a>
+              <a href='https://github.com/RW2023/rw-images' target='_blank' rel='noopener noreferrer'>
+                <button type='button' aria-label='github' className="btn btn-secondary m-1">GitHub</button>
               </a>
             </div>
           </div>
