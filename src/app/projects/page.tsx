@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { motion } from 'framer-motion';
 import Heading from '@/components/ui/Heading';
 import SubHeading from '@/components/ui/SubHeading';
+import Image from 'next/image';
 
 interface Props {}
 
@@ -19,19 +20,27 @@ const page: FC<Props> = (): JSX.Element => {
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mb-5">
         <motion.div
-          className="card mx-auto items-center border rounded bg-base-300"
+          className="card mx-auto items-center border rounded bg-base-300 m-4"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="card-title">
+          <div className="card-title p-4">
             <SubHeading
-              title={`Card Title 1`}
-              iconClass="fas fa-project-diagram"
+              title={`Photography Portfolio`}
+              iconClass="fas fa-images"
             />
           </div>
           <div className="card-body">
-            <p>This is the body for Card 1</p>
+            <div className="card-image className='rounded border-1 border-gray-500 drop-shadow-md'">
+              <Image
+                src="/projects/Ryan-Wilson-Images.png"
+                alt="Ryan Wilson"
+                width={500}
+                height={300}
+              />
+            </div>
+            <div className="card-text"></div>
           </div>
         </motion.div>
         <motion.div
