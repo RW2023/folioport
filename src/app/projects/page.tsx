@@ -15,7 +15,7 @@ const page: FC<Props> = (): JSX.Element => {
         />
         <p className="text-xl">This is paragraph font on the Projects Page</p>
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mb-5">
         <div className="card mx-auto items-center border rounded bg-base-300">
           <div className="card-title">
             <SubHeading
