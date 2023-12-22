@@ -97,7 +97,7 @@ const page: FC<Props> = (): JSX.Element => {
             <div className="card rounded border-1 border-gray-500 drop-shadow-md">
               <Link href="projects/flixer">
                 <Image
-                  src="/projects/flixer.png"
+                  src="/projects/Flixer.png"
                   alt="Ryan Wilson"
                   width={500}
                   height={300}
