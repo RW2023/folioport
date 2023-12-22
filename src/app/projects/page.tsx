@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Heading from '@/components/ui/Heading';
 import SubHeading from '@/components/ui/SubHeading';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Props {}
 
@@ -34,12 +35,16 @@ const page: FC<Props> = (): JSX.Element => {
           </div>
           <div className="card-body mx-auto border-y glass">
             <div className="card-image className='rounded border-1 border-gray-500 drop-shadow-md'">
-              <Image
-                src="/projects/Ryan-Wilson-Images.png"
-                alt="Ryan Wilson"
-                width={500}
-                height={300}
-              />
+              <Link
+              href="projects/photography"
+              >
+                <Image
+                  src="/projects/Ryan-Wilson-Images.png"
+                  alt="Ryan Wilson"
+                  width={500}
+                  height={300}
+                />
+              </Link>
             </div>
             <div className="card-text">
               <p>
