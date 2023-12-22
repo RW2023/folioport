@@ -34,7 +34,7 @@ const page: FC<Props> = (): JSX.Element => {
             />
           </div>
           <div className="card-body mx-auto border-y glass">
-            <div className="card-image className='rounded border-1 border-gray-500 drop-shadow-md'">
+            <div className="card rounded border-1 border-gray-500 drop-shadow-md">
               <Link
               href="projects/photography"
               >
