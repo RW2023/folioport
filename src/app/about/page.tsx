@@ -9,31 +9,29 @@ import { motion, useAnimation } from 'framer-motion';
 
 
 export default function About() {
- const controls = useAnimation();
+const controls = useAnimation();
 
- useEffect(() => {
-   const updateAnimation = () => {
-     // Example condition: start animation when a certain scroll position is reached
-     if (window.scrollY > 0) {
-       controls.start('show');
-     } else {
-       controls.start('hidden');
-     }
-   };
+useEffect(() => {
+  const updateAnimation = () => {
+    if (window.scrollY > 0) {
+      controls.start('show');
+    } else {
+      controls.start('hidden');
+    }
+  };
 
-   window.addEventListener('scroll', updateAnimation);
-   return () => window.removeEventListener('scroll', updateAnimation);
- }, [controls]);
+  window.addEventListener('scroll', updateAnimation);
+  return () => window.removeEventListener('scroll', updateAnimation);
+}, [controls]);
 
- const slideInVariants = {
-   hidden: { opacity: 0, x: -100 },
-   show: {
-     opacity: 1,
-     x: 0,
-     transition: { type: 'spring', stiffness: 100 },
-   },
- };
-
+const slideInVariants = {
+  hidden: { opacity: 0, x: -100 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { type: 'spring', stiffness: 100 },
+  },
+};
   // Construct Cloudinary URL for your image with transformations
    const imageUrl = `https://res.cloudinary.com/wildev/image/upload/w_120,h_120,c_fill,g_face,r_max/sites/RW%20Images/me_yzjh2n.jpg`;
 
@@ -71,7 +69,12 @@ export default function About() {
             <SubHeading title="GitHub Stats" iconClass="fab fa-github" />
             <GitHubStreak />
           </div>
-
+ <motion.div
+            initial="hidden"
+            animate={controls}
+            variants={slideInVariants}
+            className="grid grid-cols-1 gap-3 md:grid-cols-1 lg:grid-cols-2"
+          ></motion.div>
           <div className="grid grid-col-1 gap-3 md:col-1 lg:grid-cols-2">
             <div className="card bg-base-300 shadow-xl mb-6 glass  mx-auto text-lg ">
               <div className="card-body">
@@ -148,7 +151,6 @@ export default function About() {
                   platform reflecting my journey as a web developer.
                 </p>
               </div>
-              <div></div>
             </div>
           </div>
           <SubHeading title="My Skills" iconClass="fas fa-code" />
