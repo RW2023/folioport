@@ -30,7 +30,7 @@ const page: FC<Props> = (): JSX.Element => {
           <div className="card-image flex justify-center items-center">
           
 
-            <motion.div whileHover={{ scale: 2.1 }}>
+            <motion.div whileHover={{ scale: 1.1 }}>
                 <Image
                     src="/projects/Ryan-Wilson-Images.png"
                     alt="Ryan Wilson"
