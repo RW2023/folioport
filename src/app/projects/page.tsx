@@ -80,7 +80,7 @@ const page: FC<Props> = (): JSX.Element => {
             </div>
           </div>
         </motion.div>
-        {/* First Card - Original Style */}
+        {/* Second Card - Original Style */}
         <motion.div
           className="card items-center border rounded-md bg-base-300 mx-5 flex flex-col"
           initial={{ opacity: 0, x: -100 }}
