@@ -98,7 +98,7 @@ const page: FC<Props> = (): JSX.Element => {
               <Link href="projects/flixer">
                 <Image
                   src="/projects/Flixer.png"
-                  alt="Ryan Wilson"
+                  alt="Flixer"
                   width={500}
                   height={300}
                 />
