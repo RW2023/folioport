@@ -41,7 +41,7 @@ const Navbar = () => {
                 className="rounded-full"
               />
               {/* SubHeading */}
-              <SubHeading title="Ryan Wilson" iconClass='fas fa-person' />
+              <SubHeading title="Ryan Wilson" iconClass="fas fa-person" />
             </div>
           </span>
         </Link>
@@ -96,7 +96,7 @@ const Navbar = () => {
               onClick={closeNavbar}
               className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl  hover:underline mr-4 cursor-pointer"
             >
-              <i className="fas fa-info-circle mr-2"></i>Projects
+              <i className="fas fa-code mr-2"></i>Projects{' '}
             </span>
           </Link>
           <Link href="/about">
@@ -104,7 +104,7 @@ const Navbar = () => {
               onClick={closeNavbar}
               className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl  hover:underline mr-4 cursor-pointer"
             >
-              <i className="fas fa-images mr-2"></i>About Me
+              <i className="fas fa-info mr-2"></i>About Me
             </span>
           </Link>
           <Link href="/feedback">
