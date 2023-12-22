@@ -5,13 +5,13 @@ import SubHeading from '@/components/ui/SubHeading';
 function Custom404() {
   return (
     <div
-      className="bg-background min-h-screen flex items-center justify-center text-center "
+      className="bg-base-100 min-h-screen flex items-center justify-center text-center "
       data-theme="halloween"
     >
       <div className="card bordered p-10 shadow-xl bg-base-300 mx-auto w-3/4">
         <div className="border rounded p-4 bg-base-100">
-          <Heading
-            title="Nope! That page isn't here 🥹"
+          <SubHeading
+            title="Oh oh!🥹"
             iconClass="fas fa-exclamation-triangle"
           />
         </div>
