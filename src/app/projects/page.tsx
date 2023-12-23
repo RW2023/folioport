@@ -90,7 +90,7 @@ const page: FC<Props> = (): JSX.Element => {
           <div className="card-title p-4">
             <SubHeading
               title={`movie search app`}
-              iconClass="fas fa-images"
+              iconClass="fas fa-film"
             />
           </div>
           <div className="card-body mx-auto border-y glass">
