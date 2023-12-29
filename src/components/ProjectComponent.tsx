@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import SubHeading from '@/components/ui/SubHeading';
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import Loading from '@/components/ui/Loading';
 
 export interface Project {
   id: number;
@@ -14,6 +16,19 @@ export interface Project {
 }
 
 const ProjectComponent = ({ project }: { project: Project }) => {
+ const [isLoading, setIsLoading] = useState(true);
+
+ useEffect(() => {
+   // Simulate a data fetch with a timeout
+   setTimeout(() => {
+     setIsLoading(false);
+   }, 2000);
+ }, []);
+
+ if (isLoading) {
+   return <Loading />;
+ }
+
   return (
     <motion.div
       className="card items-center border rounded-md bg-base-300 mx-5 flex flex-col"
