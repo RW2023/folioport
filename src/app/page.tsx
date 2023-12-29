@@ -1,14 +1,21 @@
 //src/app/page.tsx
 import Heading from "@/components/ui/Heading";
 import SubHeading from "@/components/ui/SubHeading";
+import Image from "next/image";
 
 
 export default function Home() {
   return (
-    <div className="flex flex-col  items-center  min-h-screen m-4 p-1 bg-base-100">
-     <Heading title="home page" iconClass="fas fa-home" />
-      <SubHeading title="This is a subheading on the Home Page" iconClass="fas fa-info-circle" />
-      <p className="text-xl">This is paragraph font on the Home Page</p>
+    <div className="text-center p-10">
+      <div className="hero-section bg-gray-200">
+        <Image src="/dred.png"
+          width={1200}
+          height={500}
+         alt="Hero" 
+         className="hero-image drop-shadow" />
+      </div>
+      <Heading title="I'm Ryan Wilson" iconClass="fas fa-user" />
+      <SubHeading title=" a Full Stack Developer" iconClass="fas fa-code" />
     </div>
   );
 }
