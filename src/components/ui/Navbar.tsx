@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import SubHeading from './SubHeading';
 import DarkModeToggle from './DarkModeToggle';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,8 +15,7 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
-  // Construct Cloudinary URL for your image with transformations
-  const imageUrl = `https://res.cloudinary.com/wildev/image/upload/w_60,h_60,c_fill,g_face,r_max/sites/RW%20Images/me_yzjh2n.jpg`;
+ 
 
   return (
     <nav
@@ -33,12 +33,12 @@ const Navbar = () => {
               {' '}
               {/* Flexbox container */}
               {/* Image */}
-              <img
-                src={imageUrl}
+              <Image
+                src={'/me.jpeg'}
                 alt="Ryan Wilson"
                 width="60"
                 height="60"
-                className="rounded-full"
+                className="rounded-full border-2 border-button"
               />
               {/* SubHeading */}
               <SubHeading title="Ryan Wilson" iconClass="fas fa-person" />
