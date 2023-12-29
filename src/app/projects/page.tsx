@@ -25,7 +25,7 @@ const ProjectsPage: React.FC = () => {
     }, []);
 
     return (
-        <div>
+        <div className='min-h-screen'>
             {projects.map((project) => (
                 <ProjectComponent key={project.id} project={project} />
             ))}
