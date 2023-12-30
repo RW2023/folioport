@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import SubHeading from './SubHeading';
 import DarkModeToggle from './DarkModeToggle';
+import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
 
 const Navbar = () => {
@@ -15,13 +16,47 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
- 
+ const variants = {
+   hidden: { opacity: 0 },
+   show: {
+     opacity: 1,
+     transition: {
+       duration: 0.5,
+     },
+   },
+ };
+
+ const buttonVariants = {
+   open: {
+     rotate: 180,
+     scale: 1.2,
+     transition: {
+       duration: 0.6,
+     },
+   },
+   closed: {
+     rotate: 0,
+     scale: 1,
+     transition: {
+       duration: 0.6,
+     },
+   },
+ };
+
+ const buttonControls = useAnimation();
+
+   const toggleNavbar = () => {
+     setIsOpen(!isOpen);
+     buttonControls.start(isOpen ? 'closed' : 'open');
+   };
 
   return (
-    <nav
+    <motion.nav
       className="flex items-center justify-between flex-wrap p-3 navbar mt-0 sticky top-0 z-20 bg-base-200 shadow-2xl bg-opacity-90"
       style={{ fontFamily: "'Poppins', sans-serif" }}
-      // data-theme="black"
+      initial="hidden"
+      animate="show"
+      variants={variants}
     >
       <div className="flex items-center flex-shrink-0 text-2xl mr-6">
         <Link href="/">
@@ -31,8 +66,7 @@ const Navbar = () => {
           >
             <div className="flex items-center">
               {' '}
-              {/* Flexbox container */}
-              {/* Image */}
+              {/* Logo Image */}
               <Image
                 src={'/me.jpeg'}
                 alt="Ryan Wilson"
@@ -47,10 +81,13 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="block lg:hidden">
-        <button
+        <motion.button
           type="button"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={toggleNavbar}
           className="text-4xl inline-flex items-center justify-center p-2 rounded-md hover:bg-button hover:text-buttonText focus:outline-none focus:ring-2 focus:ring-inset focus:ring-buttonText text-base-content"
+          animate={buttonControls}
+          variants={buttonVariants}
+          initial="closed"
         >
           {isOpen ? (
             <svg
@@ -83,7 +120,7 @@ const Navbar = () => {
               />
             </svg>
           )}
-        </button>
+        </motion.button>
       </div>
       <div
         className={`${
@@ -123,10 +160,10 @@ const Navbar = () => {
               <i className="fas fa-envelope mr-2"></i>Contact
             </span>
           </Link>
-          <DarkModeToggle />
+          {/* <DarkModeToggle /> */}
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
