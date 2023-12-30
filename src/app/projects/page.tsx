@@ -3,7 +3,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { supabase } from '@/utils/supabaseClient';
-import ProjectComponent from '@/components/ProjectComponent';
+import ProjectComponent from '@/components/ProjectsComponent';
 import { Project } from '@/types/project';
 import LoadingComponent from '@/components/ui/Loading';
 

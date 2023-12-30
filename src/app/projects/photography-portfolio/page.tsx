@@ -1,4 +1,5 @@
 'use client';
+//src/app/projects/photography-portfolio/page.tsx
 import { FC } from 'react';
 import Heading from '@/components/ui/Heading';
 import SubHeading from '@/components/ui/SubHeading';
