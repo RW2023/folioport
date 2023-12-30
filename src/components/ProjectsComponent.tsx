@@ -34,11 +34,11 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ({ project }) => {
               alt={project.title}
               width={500}
               height={300}
-              className="hover:scale-105 transition-transform duration-300 ease-in-out rounded-lg"
+              className="hover:scale-105 transition-transform duration-300 ease-in-out rounded"
             />
           </Link>
         </div>
-        <div className="border border-1 p-4 rounded-lg bg-base-300 drop-shadow-md glass prose">
+        <div className="border border-1 p-2 rounded bg-base-300 drop-shadow-md glass prose">
           <p className="text-lg">{project.description}</p>
           <a href={project.live_url} target="_blank" rel="noopener noreferrer">
             <button
