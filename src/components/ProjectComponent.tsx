@@ -1,34 +1,16 @@
-// components/ProjectComponent.tsx
+// src/components/ProjectComponent.tsx
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import SubHeading from '@/components/ui/SubHeading';
+import { Project } from '@/types/project';
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
-import Loading from '@/components/ui/Loading';
 
-export interface Project {
-  id: number;
-  title: string;
-  description: string;
-  image_url: string;
-  live_url: string;
-  github_url: string;
+interface ProjectComponentProps {
+  project: Project;
 }
 
-const ProjectComponent = ({ project }: { project: Project }) => {
- const [isLoading, setIsLoading] = useState(true);
-
- useEffect(() => {
-   // Simulate a data fetch with a timeout
-   setTimeout(() => {
-     setIsLoading(false);
-   }, 2000);
- }, []);
-
- if (isLoading) {
-   return <Loading />;
- }
-
+const ProjectComponent: React.FC<ProjectComponentProps> = ({ project }) => {
   return (
     <motion.div
       className="card items-center border rounded-md bg-base-300 mx-5 flex flex-col"
@@ -47,14 +29,12 @@ const ProjectComponent = ({ project }: { project: Project }) => {
               .split(' ')
               .join('-')}`}
           >
-            
               <Image
                 src={project.image_url}
                 alt={project.title}
                 width={500}
                 height={300}
               />
-            
           </Link>
         </div>
         <div className="card-text">
