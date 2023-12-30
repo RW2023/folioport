@@ -13,37 +13,38 @@ interface ProjectComponentProps {
 const ProjectComponent: React.FC<ProjectComponentProps> = ({ project }) => {
   return (
     <motion.div
-      className="card-compact items-center border rounded-md bg-base-900 mx-5 flex flex-col"
+      className="card card-compact items-center border border-1rounded-lg bg-base-100 shadow-xl mx-5 my-4 flex flex-col font-sans"
       initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="card-title p-4">
+      <div className="card-title text-2xl font-semibold p-5 ">
         <SubHeading title={project.title} iconClass="fas fa-project-diagram" />
       </div>
-      <div className="card-body mx-auto border-y glass">
-        <div className="card rounded border-1 border-gray-500 drop-shadow-md">
+      <div className="card-body mx-auto  border-1 drop-shadow-lg border border-1">
+        <div className="card rounded-lg overflow-hidden">
           <Link
             href={`/projects/${project.title
               .toLowerCase()
               .split(' ')
               .join('-')}`}
           >
-              <Image
-                src={project.image_url}
-                alt={project.title}
-                width={500}
-                height={300}
-              />
+            <Image
+              src={project.image_url}
+              alt={project.title}
+              width={500}
+              height={300}
+              className="hover:scale-105 transition-transform duration-300 ease-in-out rounded-lg"
+            />
           </Link>
         </div>
-        <div className="">
-          <p className='text-lg'>{project.description}</p>
+        <div className="border border-1 p-4 rounded-lg bg-base-300 drop-shadow-md glass prose">
+          <p className="text-lg">{project.description}</p>
           <a href={project.live_url} target="_blank" rel="noopener noreferrer">
             <button
               type="button"
               aria-label="live version"
-              className="btn btn-primary m-1"
+              className="btn btn-primary m-1 hover:bg-blue-700"
             >
               Live Version
             </button>
@@ -56,7 +57,7 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ({ project }) => {
             <button
               type="button"
               aria-label="github"
-              className="btn btn-secondary m-1"
+              className="btn btn-secondary m-1 hover:bg-gray-700"
             >
               GitHub
             </button>
