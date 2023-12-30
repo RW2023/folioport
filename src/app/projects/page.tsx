@@ -1,167 +1,47 @@
+// pages/projects.tsx
 'use client';
-import { FC } from 'react';
-import { motion } from 'framer-motion';
-import Heading from '@/components/ui/Heading';
-import SubHeading from '@/components/ui/SubHeading';
-import Image from 'next/image';
-import Link from 'next/link';
 
-interface Props {}
+import React, { useEffect, useState } from 'react';
+import { supabase } from '@/utils/supabaseClient';
+import ProjectComponent from '@/components/ProjectComponent';
+import { Project } from '@/types/project';
+import LoadingComponent from '@/components/ui/Loading';
 
-const page: FC<Props> = (): JSX.Element => {
+const ProjectsPage: React.FC = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      setIsLoading(true);
+      const { data: projects, error } = await supabase
+        .from('projects')
+        .select('*');
+
+      if (error) {
+        console.error('Error fetching projects:', error);
+      } else if (projects) {
+        setProjects(projects);
+      }
+      setIsLoading(false);
+    };
+
+    fetchProjects();
+  }, []);
+
+  if (isLoading) {
+    return <LoadingComponent />;
+  }
+
   return (
-    <>
-      <div className="flex flex-col items-center m-4 p-1 bg-base-100">
-        <Heading title="projects" iconClass="fas fa-cogs" />
-        <SubHeading
-          title="Live and Codebase"
-          iconClass="fas fa-project-diagram"
-        />
-        <p className="text-xl">My Deployed projects</p>
-      </div>
+    <div className="container mx-auto p-4">
       <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mb-5">
-        {/* First Card - Original Style */}
-        <motion.div
-          className="card items-center border rounded-md bg-base-300 mx-5 flex flex-col"
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="card-title p-4">
-            <SubHeading
-              title={`Photography Portfolio`}
-              iconClass="fas fa-images"
-            />
-          </div>
-          <div className="card-body mx-auto border-y glass">
-            <div className="card rounded border-1 border-gray-500 drop-shadow-md">
-              <Link href="projects/photography">
-                <Image
-                  src="/projects/Ryan-Wilson-Images.png"
-                  alt="Ryan Wilson"
-                  width={500}
-                  height={300}
-                />
-              </Link>
-            </div>
-            <div className="card-text">
-              <p>
-                This is a photography portfolio website that I built using
-                NextJS, TailwindCSS, and Framer Motion. I used the NextJS Image
-                component to optimize the images for the web. I also used the
-                Framer Motion library to animate.
-              </p>
-              <a
-                href="https://rw-images.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button
-                  type="button"
-                  aria-label="live version"
-                  className="btn btn-primary m-1"
-                >
-                  Live Version
-                </button>
-              </a>
-              <a
-                href="https://github.com/RW2023/rw-images"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button
-                  type="button"
-                  aria-label="github"
-                  className="btn btn-secondary m-1"
-                >
-                  GitHub
-                </button>
-              </a>
-            </div>
-          </div>
-        </motion.div>
-        {/* Second Card - Original Style */}
-        <motion.div
-          className="card items-center border rounded-md bg-base-300 mx-5 flex flex-col"
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="card-title p-4">
-            <SubHeading
-              title={`movie search app`}
-              iconClass="fas fa-film"
-            />
-          </div>
-          <div className="card-body mx-auto border-y glass">
-            <div className="card rounded border-1 border-gray-500 drop-shadow-md">
-              <Link href="projects/flixer">
-                <Image
-                  src="/projects/Flixer.png"
-                  alt="Flixer"
-                  width={500}
-                  height={300}
-                />
-              </Link>
-            </div>
-            <div className="card-text">
-              <p>
-                This is a movie search app that I built using NextJS. It is
-                build with typescript and uses the IMDB API to fetch movie data.
-              </p>
-              <a
-                href="https://movies2023.vercel.app/movies"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button
-                  type="button"
-                  aria-label="live version"
-                  className="btn btn-primary m-1"
-                >
-                  Live Version
-                </button>
-              </a>
-              <a
-                href="https://github.com/RW2023/next-movies"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button
-                  type="button"
-                  aria-label="github"
-                  className="btn btn-secondary m-1"
-                >
-                  GitHub
-                </button>
-              </a>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Other Cards - Duplicated Style */}
-        {[...Array(4)].map((_, index) => (
-          <motion.div
-            key={`card-${index + 2}`}
-            className="card items-center border rounded-md bg-base-300 mx-5 flex flex-col"
-            initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="card-title p-4">
-              <SubHeading
-                title={`Card Title ${index + 2}`}
-                iconClass="fas fa-project-diagram"
-              />
-            </div>
-            <div className="card-body mx-auto border-y glass">
-              <p>This is the body for Card {index + 2}</p>
-            </div>
-          </motion.div>
+        {projects.map((project) => (
+          <ProjectComponent key={project.id} project={project} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
-export default page;
+export default ProjectsPage;
