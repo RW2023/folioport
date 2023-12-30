@@ -32,8 +32,7 @@ const slideInVariants = {
     transition: { type: 'spring', stiffness: 100 },
   },
 };
-  // Construct Cloudinary URL for your image with transformations
-   const imageUrl = `https://res.cloudinary.com/wildev/image/upload/w_120,h_120,c_fill,g_face,r_max/sites/RW%20Images/me_yzjh2n.jpg`;
+ 
 
   return (
     <>
@@ -50,11 +49,11 @@ const slideInVariants = {
           >
             <div className="flex items-center justify-center">
               <Image
-                src={imageUrl}
+                src={'/me.jpeg'}
                 alt="Ryan Wilson Profile Picture"
                 width="120"
                 height="120"
-                className="rounded-full"
+                className="rounded-full border-2 border-button"
                 role="img"
                 aria-label="Profile picture of Ryan Wilson"
               />
