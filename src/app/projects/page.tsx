@@ -35,7 +35,7 @@ const ProjectsPage: React.FC = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mb-5">
         {projects.map((project) => (
           <ProjectComponent key={project.id} project={project} />
         ))}
