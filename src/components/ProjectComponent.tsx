@@ -13,7 +13,7 @@ interface ProjectComponentProps {
 const ProjectComponent: React.FC<ProjectComponentProps> = ({ project }) => {
   return (
     <motion.div
-      className="card items-center border rounded-md bg-base-300 mx-5 flex flex-col"
+      className="card-compact items-center border rounded-md bg-base-300 mx-5 flex flex-col"
       initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
