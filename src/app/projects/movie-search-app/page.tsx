@@ -45,7 +45,7 @@ const page: FC<Props> = (): JSX.Element => {
             and uses the IMDB API to fetch movie data.
           </p>
           <a
-            href="https://movies2023.vercel.app/movies"
+            href="https://movies2023.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
