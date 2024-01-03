@@ -15,6 +15,9 @@ const Skills = () => {
     { skill: 'Tailwind', icon: 'tailwindcss' },
     { skill: 'Material UI', icon: 'material-ui' },
     { skill: 'figma', icon: 'figma' },
+    { skill: 'git', icon: 'git' },
+    { skill: 'github', icon: 'github' },
+
   ];
 
   const backendSkills = [
