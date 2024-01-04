@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import SubHeading from './SubHeading';
-import DarkModeToggle from './DarkModeToggle';
+// import DarkModeToggle from './DarkModeToggle';
 import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
 
@@ -133,7 +133,7 @@ const Navbar = () => {
               onClick={closeNavbar}
               className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl  hover:underline mr-4 cursor-pointer"
             >
-              <i className="fas fa-cogs mr-2"></i>Projects{' '}
+              <i className="fas fa-cocktail mr-2"></i>Bar{' '}
             </span>
           </Link>
           <Link href="/about">
@@ -141,7 +141,7 @@ const Navbar = () => {
               onClick={closeNavbar}
               className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl  hover:underline mr-4 cursor-pointer"
             >
-              <i className="fas fa-info mr-2"></i>About Me
+              <i className="fas fa-info mr-2"></i>About Mixologist
             </span>
           </Link>
           <Link href="/feedback">
