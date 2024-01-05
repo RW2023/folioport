@@ -69,7 +69,7 @@ const Navbar = () => {
               {/* Logo Image */}
               <Image
                 src={'/me.jpeg'}
-                alt="Ryan Wilson"
+                alt="Ryan Wilson logo"
                 width="60"
                 height="60"
                 className="rounded-full border-2 border-button"
