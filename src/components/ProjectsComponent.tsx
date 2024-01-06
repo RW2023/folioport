@@ -23,12 +23,8 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ({ project }) => {
       </div>
       <div className="card-body mx-auto  border-1 drop-shadow-lg border border-1">
         <div className="card rounded-lg overflow-hidden">
-          <Link
-            href={`/projects/${project.title
-              .toLowerCase()
-              .split(' ')
-              .join('-')}`}
-          >
+          <Link href={`/projects/${project.id}`}>
+            {' '}
             <Image
               src={project.image_url}
               alt={project.title}
